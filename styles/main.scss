@@ -1,0 +1,249 @@
+// Import partials
+@import 'base/reset';
+@import 'base/typography';
+@import 'utils/variables';
+@import 'utils/mixins';
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+
+    // Responsive styles
+    @include respond-to(tablet) {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    @include respond-to(phone) {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+// common
+.mian-bg-wrap {
+    background-image: url(../img/main_bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+
+    .image-wrap {
+        height: 100vh;
+        position: relative;
+
+        .star {
+            position: absolute;
+        }
+
+        .right_half_circle {
+            width: 400px;
+            position: absolute;
+            right: -270px;
+            top: -10%;
+        }
+    }
+
+}
+
+
+.scene-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    animation: fade-in 1s;
+    opacity: 1;
+    visibility: visible;
+
+    &.hide {
+        animation: fade-out 1s forwards;
+    }
+
+
+}
+
+.scene-2 {
+    animation: fade-out 1s forwards;
+    opacity: 0;
+    visibility: hidden;
+
+    &.d-block {
+        animation: fade-in 1s forwards;
+    }
+}
+.scene-4 {
+    position: relative;
+    .content-with-bg{
+        h3{
+            font-size: 27px;
+            color:#fff;
+            text-align: center;
+            font-weight: normal;
+            font-family: Inter;
+            position: absolute;
+            // top: 20%;
+        }
+    }
+    .scene-4-2 img{
+        z-index: 999;
+    }
+    .scene-4-3 {
+        
+        img{
+            z-index: 99;
+            
+        }
+        .roundGlobe{
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .backgroundRed{
+            // top:100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+
+.hero-slide-warp {
+    position: relative;
+    padding-top: 20%;
+
+    .content-warp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 45px;
+        text-align: center;
+
+        .welcome-content {
+            h2 {
+                font-size: 27px;
+                font-weight: 400;
+                line-height: 33px;
+                letter-spacing: 0em;
+                color: #EBE1D8;
+            }
+
+        }
+
+        .disclaimer-text {
+            p {
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #fff;
+
+            }
+        }
+    }
+}
+
+.hero-second-section-wrap {
+    position: relative;
+    height: 50vh;
+
+    .hero-second-section {
+        position: sticky;
+        top: 35%;
+
+        .content-warp {
+            width: 30%;
+            margin: 0 auto;
+
+            h3 {
+                font-size: 27px;
+                font-weight: 400;
+                line-height: 33px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: #fff;
+
+            }
+        }
+    }
+}
+
+.full-height-section-4 {
+    height: 100vh;
+    // padding: 10% 0px;
+    position: relative;
+
+    .content-with-bg {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        width: 25%;
+        h2 {
+            font-size: 27px;
+            font-weight: 400;
+            line-height: 33px;
+            letter-spacing: 0em;
+            color: #EBE1D8;
+        }
+
+    }
+
+    .imag-section-warp {
+        img {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+// _reset.scss
+
+// Reset box-sizing to border-box for all elements
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Remove list styles
+  ul, ol {
+    list-style: none;
+  }
+  
+  // Remove default anchor styles
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  // Reset heading margins
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+  
+  // Reset form element styles
+  input, textarea, button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-family: inherit;
+  }
+  
+  // Additional resets can be added as needed
+  

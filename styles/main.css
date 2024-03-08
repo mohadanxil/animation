@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+input, textarea, button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #0056b3;
+}
+@media only screen and (max-width: 768px) {
+  .button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+.mian-bg-wrap {
+  background-image: url(../img/main_bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
+.mian-bg-wrap .image-wrap {
+  height: 100vh;
+  position: relative;
+}
+.mian-bg-wrap .image-wrap .star {
+  position: absolute;
+}
+.mian-bg-wrap .image-wrap .right_half_circle {
+  width: 400px;
+  position: absolute;
+  right: -270px;
+  top: -10%;
+}
+
+.scene-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  animation: fade-in 1s;
+  opacity: 1;
+  visibility: visible;
+}
+.scene-1.hide {
+  animation: fade-out 1s forwards;
+}
+
+.scene-2 {
+  animation: fade-out 1s forwards;
+  opacity: 0;
+  visibility: hidden;
+}
+.scene-2.d-block {
+  animation: fade-in 1s forwards;
+}
+
+.scene-4 {
+  position: relative;
+}
+.scene-4 .content-with-bg h3 {
+  font-size: 27px;
+  color: #fff;
+  text-align: center;
+  font-weight: normal;
+  font-family: Inter;
+  position: absolute;
+}
+.scene-4 .scene-4-2 img {
+  z-index: 999;
+}
+.scene-4 .scene-4-3 img {
+  z-index: 99;
+}
+.scene-4 .scene-4-3 .roundGlobe {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.scene-4 .scene-4-3 .backgroundRed {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.hero-slide-warp {
+  position: relative;
+  padding-top: 20%;
+}
+.hero-slide-warp .content-warp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 45px;
+  text-align: center;
+}
+.hero-slide-warp .content-warp .welcome-content h2 {
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0em;
+  color: #EBE1D8;
+}
+.hero-slide-warp .content-warp .disclaimer-text p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-second-section-wrap {
+  position: relative;
+  height: 50vh;
+}
+.hero-second-section-wrap .hero-second-section {
+  position: sticky;
+  top: 35%;
+}
+.hero-second-section-wrap .hero-second-section .content-warp {
+  width: 30%;
+  margin: 0 auto;
+}
+.hero-second-section-wrap .hero-second-section .content-warp h3 {
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #fff;
+}
+
+.full-height-section-4 {
+  height: 100vh;
+  position: relative;
+}
+.full-height-section-4 .content-with-bg {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+}
+.full-height-section-4 .content-with-bg h2 {
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0em;
+  color: #EBE1D8;
+}
+.full-height-section-4 .imag-section-warp img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}/*# sourceMappingURL=main.css.map */
